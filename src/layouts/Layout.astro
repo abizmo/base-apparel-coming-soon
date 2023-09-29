@@ -10,11 +10,12 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+		<title>Frontend Mentor | {title}</title>
 	</head>
 	<body>
 		<slot />
@@ -22,30 +23,22 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
+		--primary: 0, 93%, 68%;
+		--primary-desaturated: 0, 36%, 70%;
+		--neutral-dark: 0, 6%, 24%;
+		--primary-gradient: linear-gradient(
+			135deg,
+			hsl(0, 80%, 86%),
+			hsl(0, 74%, 74%)
+		);
+		--white-gradient: linear-gradient(
+			135deg,
+			hsl(0, 0%, 100%),
+			hsl(0, 100%, 98%)
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+		font-family: Josefin Sans, system-ui, sans-serif;
+		color: hsl(var(--neutral-dark));
 	}
 </style>

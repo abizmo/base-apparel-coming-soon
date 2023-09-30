@@ -1,37 +1,105 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import IconArrow from '../components/IconArrow.astro';
+import Layout from "../layouts/Layout.astro";
+import IconArrow from "../components/IconArrow.astro";
+import Logo from "../components/Logo.astro";
 ---
 
 <Layout title="Base Apparel coming soon page">
 	<main>
-  <h1><small>We're</small>coming soon</h1>
+		<header>
+			<Logo />
+		</header>
+		<picture>
+			<source media="(min-width: 64rem)" srcset="/img/hero-desktop.jpg" />
+			<img src="/img/hero-mobile.jpg" alt="Base Apparel" />
+		</picture>
+		<div class="coming-soon">
+			<h1><small>We're</small>coming soon</h1>
 
-	<p>
-		Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
-	</p>
+			<p>
+				Hello fellow shoppers! We're currently building our new fashion store.
+				Add your email below to stay up-to-date with announcements and our
+				launch deals.
+			</p>
 
-	<form>
-		<input type="email" placeholder='Email Address'/>
-		<button type="submit">
-			<IconArrow />
-		</button>
-	</form>
+			<form>
+				<input type="email" placeholder="Email Address" />
+				<button type="submit">
+					<IconArrow />
+				</button>
+			</form>
+		</div>
 	</main>
 </Layout>
 <style>
+	main {
+		display: grid;
+		grid-template-areas:
+			"header"
+			"image"
+			"coming-soon";
+	}
+
+	@media (min-width: 64rem) {
+		main {
+			grid-template-columns: 1fr 610px;
+			grid-template-areas:
+				"header image"
+				"coming-soon image";
+		}
+
+		header,
+		.coming-soon {
+			margin-inline-start: 168px;
+		}
+
+		.coming-soon {
+			max-width: 28rem;
+		}
+	}
+
+	header {
+		padding: 2rem;
+		grid-area: header;
+	}
+
+	picture {
+		grid-area: image;
+		display: inline-grid;
+		margin-inline: auto;
+	}
+
+	.coming-soon {
+		padding-inline: 2rem;
+		grid-area: coming-soon;
+		max-width: 22rem;
+	}
+
+	@media (max-width: 63.99rem) {
+		.coming-soon {
+			text-align: center;
+			margin-inline: auto;
+		}
+	}
 	h1 {
+		color: hsl(var(--neutral-dark));
 		font-size: clamp(2.5rem, 2.0158rem + 2.0657vw, 3.875rem);
 		text-transform: uppercase;
 		line-height: 110%;
 		letter-spacing: 1.1625rem;
+		margin-bottom: 1rem;
+		margin-top: 4rem;
 	}
 
 	h1 small {
+		color: hsl(var(--primary-desaturated));
 		font-size: inherit;
 		font-weight: 300;
 		line-height: 100%;
 		display: block;
-		color: hsl(var(--primary-desaturated))
+	}
+
+	p {
+		margin-bottom: 2rem;
 	}
 </style>

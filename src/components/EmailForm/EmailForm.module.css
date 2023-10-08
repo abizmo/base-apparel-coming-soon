@@ -5,7 +5,6 @@
   align-items: center;
   gap: 0.5rem;
   width: 100%;
-  max-width: 20rem;
   padding-left: 1.5rem;
 
   border: 1px solid hsla(var(--primary-desaturated), 0.6);
@@ -20,7 +19,7 @@
   flex: 1;
   border: none;
 
-  font-family: inherit;
+  font: inherit;
   color: hsl(var(--neutral-dark));
   outline: none;
 }
@@ -58,5 +57,17 @@
   bottom: -2rem;
 
   color: hsl(var(--primary-desaturated));
-  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
+}
+
+@media (min-width: 64rem) {
+  .emailForm {
+    border-radius: 2rem;
+  }
+  .emailSubmit {
+    width: 6.25rem;
+    height: 3.5rem;
+
+    border-radius: 2rem;
+  }
 }

@@ -16,13 +16,14 @@ import EmailForm from "../components/EmailForm";
 		<div class="coming-soon">
 			<h1><small>We're</small>coming soon</h1>
 
-			<p>
-				Hello fellow shoppers! We're currently building our new fashion store.
-				Add your email below to stay up-to-date with announcements and our
-				launch deals.
-			</p>
-
-			<EmailForm client:only="react" />
+			<div class="content">
+				<p>
+					Hello fellow shoppers! We're currently building our new fashion store.
+					Add your email below to stay up-to-date with announcements and our
+					launch deals.
+				</p>
+				<EmailForm client:only="react" />
+			</div>
 		</div>
 	</main>
 </Layout>
@@ -33,24 +34,6 @@ import EmailForm from "../components/EmailForm";
 			"header"
 			"image"
 			"coming-soon";
-	}
-
-	@media (min-width: 64rem) {
-		main {
-			grid-template-columns: 1fr 610px;
-			grid-template-areas:
-				"header image"
-				"coming-soon image";
-		}
-
-		header,
-		.coming-soon {
-			margin-inline-start: 168px;
-		}
-
-		.coming-soon {
-			max-width: 28rem;
-		}
 	}
 
 	header {
@@ -67,15 +50,8 @@ import EmailForm from "../components/EmailForm";
 	.coming-soon {
 		padding-inline: 2rem;
 		grid-area: coming-soon;
-		max-width: 22rem;
 	}
 
-	@media (max-width: 63.99rem) {
-		.coming-soon {
-			text-align: center;
-			margin-inline: auto;
-		}
-	}
 	h1 {
 		color: hsl(var(--neutral-dark));
 		font-size: clamp(2.5rem, 2.0158rem + 2.0657vw, 3.875rem);
@@ -94,7 +70,38 @@ import EmailForm from "../components/EmailForm";
 		display: block;
 	}
 
+	.content {
+		max-width: 60ch;
+		margin-inline: auto;
+	}
 	p {
 		margin-bottom: 2rem;
+	}
+
+	@media (max-width: 63.99rem) {
+		.coming-soon {
+			text-align: center;
+		}
+	}
+
+	@media (min-width: 64rem) {
+		main {
+			grid-template-columns: 1fr 610px;
+			grid-template-rows: min-content 1fr;
+			grid-template-areas:
+				"header image"
+				"coming-soon image";
+		}
+
+		header {
+			width: 100%;
+			padding-block: 4rem;
+		}
+
+		header,
+		.coming-soon {
+			margin-inline: auto;
+			max-width: 30rem;
+		}
 	}
 </style>

@@ -45,6 +45,7 @@ const { title } = Astro.props;
 	*::after {
 		margin: 0;
 		padding: 0;
+		box-sizing: border-box;
 	}
 	html {
 		font-family:
@@ -52,12 +53,17 @@ const { title } = Astro.props;
 			system-ui,
 			sans-serif;
 		color: hsl(var(--primary-desaturated));
-		font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+		font-size: 16px;
 		line-height: 160%;
+	}
+	
+	body {
+		font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
 	}
 
 	picture,
 	img {
+		display: block;
 		width: 100%;
 		height: auto;
 	}

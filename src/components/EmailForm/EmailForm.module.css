@@ -1,0 +1,62 @@
+.emailForm {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 20rem;
+  padding-left: 1.5rem;
+
+  border: 1px solid hsla(var(--primary-desaturated), 0.6);
+  border-radius: 1.5rem;
+}
+
+.emailForm.error {
+  border-color: hsl(var(--primary));
+}
+
+.emailInput {
+  flex: 1;
+  border: none;
+
+  font-family: inherit;
+  color: hsl(var(--neutral-dark));
+  outline: none;
+}
+
+.emailInput::placeholder {
+  color: hsl(var(--primary-desaturated), 0.6);
+}
+
+.emailSubmit {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 3rem;
+
+  border: none;
+  border-radius: 1.5rem;
+  background: var(--primary-gradient);
+  box-shadow: 0px 16px 24px 0px rgba(206, 151, 151, 0.34);
+}
+
+.emailSubmit:hover {
+  background: linear-gradient(0deg, #fff 0%, #fff 100%),
+    linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%);
+  background-blend-mode: soft-light, normal;
+}
+
+.emailSubmit:disabled {
+  background: hsla(var(--primary-desaturated), 0.6);
+  box-shadow: none;
+}
+
+.messageError {
+  position: absolute;
+  bottom: -2rem;
+
+  color: hsl(var(--primary-desaturated));
+  font-size: 0.75rem;
+}

@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import IconArrow from "../components/IconArrow.astro";
 import Logo from "../components/Logo.astro";
+import EmailForm from "../components/EmailForm";
 ---
 
 <Layout title="Base Apparel coming soon page">
@@ -22,12 +22,7 @@ import Logo from "../components/Logo.astro";
 				launch deals.
 			</p>
 
-			<form>
-				<input type="email" placeholder="Email Address" />
-				<button type="submit">
-					<IconArrow />
-				</button>
-			</form>
+			<EmailForm client:only="react" />
 		</div>
 	</main>
 </Layout>

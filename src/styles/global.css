@@ -1,0 +1,39 @@
+:root {
+  --primary: 0, 93%, 68%;
+  --primary-desaturated: 0, 36%, 70%;
+  --neutral-dark: 0, 6%, 24%;
+  --primary-gradient: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+  --white-gradient: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Josefin Sans, system-ui, sans-serif;
+  color: hsl(var(--primary-desaturated));
+  font-size: 16px;
+  line-height: 160%;
+}
+
+body {
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+}
+
+picture,
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

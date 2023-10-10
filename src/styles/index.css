@@ -13,7 +13,6 @@ header {
 
 picture {
   grid-area: image;
-  display: inline-grid;
   margin-inline: auto;
 }
 

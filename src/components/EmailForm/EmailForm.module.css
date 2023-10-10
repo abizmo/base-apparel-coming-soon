@@ -22,6 +22,7 @@
   font: inherit;
   color: hsl(var(--neutral-dark));
   outline: none;
+  background: transparent;
 }
 
 .emailInput::placeholder {
@@ -54,7 +55,7 @@
 
 .messageError {
   position: absolute;
-  bottom: -2rem;
+  bottom: -125%;
 
   color: hsl(var(--primary-desaturated));
   font-size: clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
@@ -64,10 +65,16 @@
   .emailForm {
     border-radius: 2rem;
   }
+
   .emailSubmit {
     width: 6.25rem;
     height: 3.5rem;
 
     border-radius: 2rem;
+  }
+
+  .messageError {
+    position: absolute;
+    bottom: -120%;
   }
 }

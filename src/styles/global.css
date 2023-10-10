@@ -29,6 +29,8 @@ html {
 
 body {
   font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+  background: var(--gradient-white, linear-gradient(135deg, #FFF 0%, #FFF5F5 59.37%));
+  height: 100vh;
 }
 
 picture,

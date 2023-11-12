@@ -7,15 +7,13 @@ import "../styles/index.css";
 ---
 
 <Layout title="Base Apparel coming soon page">
-	<header class="container header">
+	<header class="container">
 		<img class="logo" src="/img/logo.svg" alt="Base Apparel" />
 	</header>
-	<picture class="hero">
-		<source media="(min-width: 50rem)" srcset="/img/hero-desktop.jpg" />
-		<img src="/img/hero-mobile.jpg" alt="hero girl" />
-	</picture>
 
-	<section class="container content">
+	<div class="hero-image"></div>
+
+	<section class="container">
 		<h1 class="content__title"><small>We're</small>coming soon</h1>
 
 		<p class="content__text">
@@ -23,6 +21,7 @@ import "../styles/index.css";
 			your email below to stay up-to-date with announcements and our launch
 			deals.
 		</p>
+
 		<EmailForm client:only="react" />
 	</section>
 </Layout>

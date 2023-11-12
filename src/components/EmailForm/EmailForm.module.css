@@ -61,7 +61,7 @@
   font-size: clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 60rem) {
   .emailForm {
     border-radius: 2rem;
   }

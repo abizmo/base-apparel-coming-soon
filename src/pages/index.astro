@@ -3,28 +3,26 @@ import Layout from "../layouts/Layout.astro";
 import Logo from "../components/Logo.astro";
 import EmailForm from "../components/EmailForm";
 
-import '../styles/index.css';
+import "../styles/index.css";
 ---
-<Layout title="Base Apparel coming soon page">
-	<main>
-		<header>
-			<Logo />
-		</header>
-		<picture>
-			<source media="(min-width: 64rem)" srcset="/img/hero-desktop.jpg" />
-			<img src="/img/hero-mobile.jpg" alt="Base Apparel" />
-		</picture>
-		<div class="coming-soon">
-			<h1><small>We're</small>coming soon</h1>
 
-			<div class="content">
-				<p>
-					Hello fellow shoppers! We're currently building our new fashion store.
-					Add your email below to stay up-to-date with announcements and our
-					launch deals.
-				</p>
-				<EmailForm client:only="react" />
-			</div>
-		</div>
-	</main>
+<Layout title="Base Apparel coming soon page">
+	<header class="container header">
+		<img class="logo" src="/img/logo.svg" alt="Base Apparel" />
+	</header>
+	<picture class="hero">
+		<source media="(min-width: 50rem)" srcset="/img/hero-desktop.jpg" />
+		<img src="/img/hero-mobile.jpg" alt="hero girl" />
+	</picture>
+
+	<section class="container content">
+		<h1 class="content__title"><small>We're</small>coming soon</h1>
+
+		<p class="content__text">
+			Hello fellow shoppers! We're currently building our new fashion store. Add
+			your email below to stay up-to-date with announcements and our launch
+			deals.
+		</p>
+		<EmailForm client:only="react" />
+	</section>
 </Layout>

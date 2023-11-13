@@ -55,7 +55,7 @@
 
 .messageError {
   position: absolute;
-  bottom: -125%;
+  bottom: -2rem;
 
   color: hsl(var(--primary-desaturated));
   font-size: clamp(0.75rem, 0.706rem + 0.1878vw, 0.875rem);
@@ -75,6 +75,6 @@
 
   .messageError {
     position: absolute;
-    bottom: -120%;
+    bottom: -2rem;
   }
 }

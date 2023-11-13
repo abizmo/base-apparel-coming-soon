@@ -27,3 +27,24 @@ const { title } = Astro.props;
 		</main>
 	</body>
 </html>
+
+<style>
+	.main-container {
+		min-height: 100vh;
+	}
+
+	@media (min-width: 75em) {
+		.main-container {
+			display: grid;
+			grid-template-columns: 1fr calc(0.7625 * 100vh);
+			grid-template-rows: min-content 1fr;
+			align-items: center;
+			background-color: hsl(0, 100%, 98%);
+			background-image: url("/img/bg-pattern-desktop.svg"),
+				var(--white-gradient);
+			background-repeat: no-repeat;
+			background-position: left bottom;
+			background-size: calc(100vw - (0.7625 * 100vh)) 100%;
+		}
+	}
+</style>

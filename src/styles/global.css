@@ -39,7 +39,7 @@ body {
   width: 100%;
   aspect-ratio: 1.5;
   max-height: 500px;
-  background-image: url('/public/img/hero-mobile.jpg');
+  background-image: url('/img/hero-mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -78,7 +78,7 @@ body {
     grid-template-rows: min-content 1fr;
     align-items: center;
     background-color: aqua;
-    background-image: url('/public/img/bg-pattern-desktop.svg'), var(--white-gradient);
+    background-image: url('/img/bg-pattern-desktop.svg'), var(--white-gradient);
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: calc(100vw - (0.7625 * 100vh)) 100%;
@@ -89,6 +89,6 @@ body {
     grid-column: 2/3;
     height: 100vh;
     max-height: none;
-    background-image: url('/public/img/hero-desktop.jpg');
+    background-image: url('/img/hero-desktop.jpg');
   }
 }
